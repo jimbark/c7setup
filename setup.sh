@@ -33,16 +33,16 @@ wget -qO- https://toolbelt.heroku.com/install.sh | sh
 
 # git pull and install dotfiles as well
 cd $HOME
-if [ -d ./dotfiles/ ]; then
-    mv dotfiles dotfiles.old
+if [ -d ./c7dotfiles/ ]; then
+    mv c7dotfiles c7dotfiles.old
 fi
 if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
 git clone https://github.com/jimbark/c7dotfiles.git
-ln -sb dotfiles/.screenrc .
-ln -sb dotfiles/.bash_profile .
-ln -sb dotfiles/.bashrc .
-ln -sb dotfiles/.bashrc_custom .
-ln -sf dotfiles/.emacs.d .
+ln -sb c7dotfiles/.screenrc .
+ln -sb c7dotfiles/.bash_profile .
+ln -sb c7dotfiles/.bashrc .
+ln -sb c7dotfiles/.bashrc_custom .
+ln -sf c7dotfiles/.emacs.d .
 
