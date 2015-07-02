@@ -11,12 +11,17 @@ sudo yum update -y
 sudo yum install -y git
 
 # Load node and npm from the EPEL repository
-sudo yum install -y epel-release
-sudo yum install -y nodejs npm --enablerepo=epel
+#sudo yum install -y epel-release
+#sudo yum install -y nodejs npm --enablerepo=epel
+
+# Load node and npm from up to date source as EPEL version VERY old
+# latest scripts and install info obtained from:  https://github.com/nodesource/distributions#rpm
+sudo curl -sL https://rpm.nodesource.com/setup_5.x | bash -
+sudo yum install -y nodejs
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
-npm install -g jshint
+sudo npm install -g jshint
 
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
@@ -29,6 +34,7 @@ sudo yum install -y emacs
 # Install Heroku toolbelt, and ruby which it needs
 # https://toolbelt.heroku.com/debian
 sudo yum install -y ruby
+sudo yum install -y wget
 wget -qO- https://toolbelt.heroku.com/install.sh | sh
 
 # git pull and install dotfiles as well
