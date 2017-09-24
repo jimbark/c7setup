@@ -16,7 +16,7 @@ sudo yum install -y git
 
 # Load node and npm from up to date source as EPEL version VERY old
 # latest scripts and install info obtained from:  https://github.com/nodesource/distributions#rpm
-sudo curl -sL https://rpm.nodesource.com/setup_5.x | bash -
+curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
 sudo yum install -y nodejs
 
 # Install jshint to allow checking of JS code within emacs
