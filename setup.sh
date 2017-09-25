@@ -10,8 +10,10 @@ sudo yum update -y
 # install git
 sudo yum install -y git
 
-# Load node and npm from the EPEL repository
-#sudo yum install -y epel-release
+# Install EPEL repository
+sudo yum install -y epel-release
+
+#Load node and npm from the EPEL repository
 #sudo yum install -y nodejs npm --enablerepo=epel
 
 # Load node and npm from up to date source as EPEL version VERY old
@@ -25,6 +27,7 @@ sudo npm install -g jshint
 
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
+# note this installs from EPEL repo
 sudo yum install -y rlwrap
 
 # Install emacs24
