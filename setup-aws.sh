@@ -76,3 +76,17 @@ git clone https://github.com/jimbark/memlist2.git
 cd ~/memlist2
 npm install 
 
+# create crontab entry to start my app automatically on reboot
+#write out current crontab
+crontab -l > mycron
+#echo new cron into cron file
+echo "@reboot /home/ec2-user/memlist2/after-reboot.sh" >> mycron
+#install new cron file
+crontab mycron
+rm mycron
+
+
+
+
+
+
